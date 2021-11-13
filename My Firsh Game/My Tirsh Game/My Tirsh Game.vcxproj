@@ -143,11 +143,12 @@
     <ClCompile Include="ClassPlayer.cpp" />
     <ClCompile Include="HeroManager.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="MyFirstGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassHero.h" />
     <ClInclude Include="ClassPlayer.h" />
+    <ClInclude Include="LogicFunction.h" />
     <ClInclude Include="HeroManager.h" />
     <ClInclude Include="PlayerManager.h" />
   </ItemGroup>
