@@ -2,18 +2,14 @@
 #include <string.h>
 #include "ClassPlayer.h"
 #include "ClassHero.h"
-#include "HeroManager.h"
-#include "PlayerManager.h"
 #include "GameManager.h"
 #include "PlayerHero.h"
 #include "Session.h"
 #include "TeamManager.h"
 
-using namespace std;
-
 int main() {
 
-        srand(time(NULL));
+        srand(time_t(0));
         ClassPlayer p[10];
         ClassHero h[10];
         TeamManager a;
@@ -60,132 +56,169 @@ int main() {
             p[i].SetPoints(0);
         }
 
-    start:;
-        for (int i = 0; i < 10; i++) {
-            int sw;
+        for (int j = 0; j < 1; j++) {
+            int sw,sw1;
             cout << "##############################\n" << "Do you wish to add player?\n1.Yes\n2.No\n" << "##############################" << endl;
             cin >> sw;
             switch (sw) {
             case 1:
-                p[i].Createplayer();
+                p[0].Createplayer();
                 break;
             case 2:
-                goto aftercreating;
                 break;
             default:
                 cout << "Invalid number. Skipping..." << endl;
             }
-        }
-    aftercreating:;
-
-        //Starting session;
-        int st = mngr.PerformGameSession();
-        if (st == 1) cout << "Initialising game session..." << endl;
-        else if (st == 2) {
-            cout << "Player creation is restarted" << endl;
-            goto start;
-        }
-        else if (st != 2 && st != 1)cout << "Invalid option. Game session will be started anyway" << endl;
-
-    sessionbegin:;
-
-        const int k = 10;
-        int m[k];
-        bool alreadyId;
-        for (int i = 0; i < k; i++)
-        {
-        a: m[i] = 1 + rand() % k;
-            for (int j = 0; j < i; j++)
-                if (m[j] == m[i]) goto a;
-        }
-
-        int v[k];
-
-        for (int i = 0; i < k; i++)
-        {
-        b: v[i] = 1 + rand() % k;
-            for (int j = 0; j < i; j++)
-                if (v[j] == v[i]) goto b;
-        }
-        for (int i = 0; i < 10; i++) {
-            p[i].SetPlayerID(m[i]);
-        }
-        for (int i = 0; i < 10; i++) {
-            h[i].SetHeroId(v[i]);
-        }
-        a.GenerateTeams();
-        a.TeamOne();
-        a.TeamTwo();
-        int win1;
-        win1 = a.CalculateWinner();
-
-        if (win1 == 1) {
-            for (int i = 0; i < 10; i++) {
-                if (p[i].GetPlayerID() == 1)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 2)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 3)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 4)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 5)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 6)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 7)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 8)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 9)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 10)   p[i].RankLose();
+            cout << "##############################\n" << "How many more players to add.[10-No] " << endl<<"You can add 9 more players: ";
+            cin >> sw1;
+            switch (sw1)
+            {
+            case 1:
+                p[1].Createplayer();
+                break;
+            case 2:
+                for (int i = 1; i < 3; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 3:
+                for (int i = 1; i < 4; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 4:
+                for (int i = 1; i < 5; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 5:
+                for (int i = 1; i < 6; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 6:
+                for (int i = 1; i < 7; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 7:
+                for (int i = 1; i < 8; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 8:
+                for (int i = 1; i < 9; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            case 9:
+                for (int i = 1; i < 10; i++) {
+                    p[i].Createplayer();
+                }
+                break;
+            default:
+                cout << "You say the number" << sw1 << endl;
+                break;
             }
         }
-        else if (win1 == 0) {
-            for (int i = 0; i < 10; i++) {
-                if (p[i].GetPlayerID() == 10)p[i].RankWin();
-                if (p[i].GetPlayerID() == 9)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 8)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 7)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 6)	p[i].RankWin();
-                if (p[i].GetPlayerID() == 5)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 4)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 3)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 2)	p[i].RankLose();
-                if (p[i].GetPlayerID() == 1)	p[i].RankLose();
+        int zz;
+        cout << "How many rounds do you want to play::";
+        cin >> zz;
+        for (int z = 1; z < zz;z++) {
+
+            cout << "########################### " << "Round:" << zz << " ###########################" << endl;
+
+            const int k = 10;
+            int m[k];
+            int v[k];
+            for (int i = 0; i < k; i++)
+            {
+                while (true) {
+                    int a = 0;
+                    m[i] = 1 + rand() % k;
+                    for (int j = 0; j < i; j++) {
+                        if (m[j] != m[i]) a++;
+                    }
+                    if (a == i) break;
+                }
+                while (true) {
+                    int b = 0;
+                    v[i] = 1 + rand() % k;
+                    for (int j = 0; j < i; j++) {
+                        if (v[j] != v[i]) b++;
+                    }
+                    if (b == i) break;
+                }
+                p[i].SetPlayerID(m[i]);
+                h[i].SetHeroId(v[i]);
             }
-        }
-        s[ses].GetTeamManager(a);
-        s[ses].SessionWinner(win1);
-        mngr.GetSession(s[ses], ses);
-        mngr.GetSessionWin(win1, ses);
+            a.GenerateTeams();
+            a.TeamOne();
+            a.TeamTwo();
+            int win1;
+            win1 = a.CalculateWinner();
 
-        if (ses < 4) {
-            ses++;
-            goto sessionbegin;
-        }
-        mngr.SessionsList();
+            if (win1 == 1) {
+                for (int i = 0; i < 10; i++) {
+                    if (p[i].GetPlayerID() == 1)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 2)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 3)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 4)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 5)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 6)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 7)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 8)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 9)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 10)   p[i].RankLose();
+                }
+            }
+            else if (win1 == 0) {
+                for (int i = 0; i < 10; i++) {
+                    if (p[i].GetPlayerID() == 10)p[i].RankWin();
+                    if (p[i].GetPlayerID() == 9)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 8)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 7)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 6)	p[i].RankWin();
+                    if (p[i].GetPlayerID() == 5)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 4)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 3)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 2)	p[i].RankLose();
+                    if (p[i].GetPlayerID() == 1)	p[i].RankLose();
+                }
+            }
+            s[ses].GetTeamManager(a);
+            s[ses].SessionWinner(win1);
+            mngr.GetSession(s[ses], ses);
+            mngr.GetSessionWin(win1, ses);
+            mngr.SessionsList();
+        } 
 
-        for (int i = 0; i < 10; i++) {
-            if (p[i].Points() == 1000)
-                p[i].SetRank("The global elite");
-            if (p[i].Points() == 125)
-                p[i].SetRank("Supreme master first class");
-            if (p[i].Points() == 100)
-                p[i].SetRank("Legendary eagle master");
-            if (p[i].Points() == 75)
-                p[i].SetRank("Legendary eagle");
-            if (p[i].Points() == 50)
-                p[i].SetRank("Distinguished master guardian");
-            if (p[i].Points() == 25)
-                p[i].SetRank("Master Guardian Elite");
-            if (p[i].Points() == 0)
-                p[i].SetRank("Master Guardian ");
-            if (p[i].Points() == -25)
-                p[i].SetRank("Gold Nova Master");
-            if (p[i].Points() == -50)
-                p[i].SetRank("Gold Nova ");
-            if (p[i].Points() == -75)
-                p[i].SetRank("Silver III");
-            if (p[i].Points() == -100)
-                p[i].SetRank("Silver II");
-            if (p[i].Points() == -125)
-                p[i].SetRank("Silver I");
-        }
-        cout << "\n\n\n" << "Final results" << endl;
-        for (int i = 0; i < 10; i++) {
-            p[i].ShowPlayerInfo();
-        }
+            for (int i = 0; i < 10; i++) {
+                if (p[i].Points() == 125)
+                    p[i].SetRank("Supreme master first class");
+                if (p[i].Points() == 100)
+                    p[i].SetRank("Legendary eagle master");
+                if (p[i].Points() == 75)
+                    p[i].SetRank("Legendary eagle");
+                if (p[i].Points() == 50)
+                    p[i].SetRank("Distinguished master guardian");
+                if (p[i].Points() == 25)
+                    p[i].SetRank("Master Guardian Elite");
+                if (p[i].Points() == 0)
+                    p[i].SetRank("Master Guardian ");
+                if (p[i].Points() == -25)
+                    p[i].SetRank("Gold Nova Master");
+                if (p[i].Points() == -50)
+                    p[i].SetRank("Gold Nova ");
+                if (p[i].Points() == -75)
+                    p[i].SetRank("Silver III");
+                if (p[i].Points() == -100)
+                    p[i].SetRank("Silver II");
+                if (p[i].Points() == -125)
+                    p[i].SetRank("Silver I");
+            }
+            cout << "\n\n\n" << "Final results" << endl;
+            for (int i = 0; i < 10; i++) {
+                p[i].ShowPlayerInfo();
+            }
     }
