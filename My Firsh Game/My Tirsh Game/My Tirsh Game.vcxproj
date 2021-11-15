@@ -141,16 +141,23 @@
   <ItemGroup>
     <ClCompile Include="ClassHero.cpp" />
     <ClCompile Include="ClassPlayer.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="HeroManager.cpp" />
+    <ClCompile Include="PlayerHero.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
     <ClCompile Include="MyFirstGame.cpp" />
+    <ClCompile Include="Session.cpp" />
+    <ClCompile Include="TeamManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassHero.h" />
     <ClInclude Include="ClassPlayer.h" />
-    <ClInclude Include="LogicFunction.h" />
+    <ClInclude Include="GameManager.h" />
     <ClInclude Include="HeroManager.h" />
+    <ClInclude Include="PlayerHero.h" />
     <ClInclude Include="PlayerManager.h" />
+    <ClInclude Include="Session.h" />
+    <ClInclude Include="TeamManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

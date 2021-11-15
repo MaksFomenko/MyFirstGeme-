@@ -1,0 +1,19 @@
+﻿  ClassHero.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  ClassPlayer.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  GameManager.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  HeroManager.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  PlayerHero.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  PlayerManager.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  MyFirstGame.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  Session.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  TeamManager.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\ClassPlayer.h(3,10): fatal error C1014: слишком много включаемых файлов: глубина = 1024
+  Создание кода...
