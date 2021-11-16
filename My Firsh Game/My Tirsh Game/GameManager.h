@@ -1,10 +1,13 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "Session.h"
+
 using namespace std;
 
 class GameManager
 {
+private:
 	Session s[5];
 public:
 	void GetSession(Session b, int i) {

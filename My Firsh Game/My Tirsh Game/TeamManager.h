@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string.h>
+#include "PlayerHero.h"
+
 using namespace std;
 
 class TeamManager

@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "ClassPlayer.h"
+#include "ClassHero.h"
 using namespace std;
 
 

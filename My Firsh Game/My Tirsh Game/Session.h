@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
 #include <string.h>
+#include "TeamManager.h"
 using namespace std;
 
 class Session
 {
+private:
 	TeamManager a;
 public:
 	int sessionwinner = 0;

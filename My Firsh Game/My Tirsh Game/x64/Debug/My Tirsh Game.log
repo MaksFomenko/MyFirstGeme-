@@ -1,0 +1,16 @@
+﻿  MyFirstGame.cpp
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\TeamManager.h(8,1): error C2011: TeamManager: переопределение типа "class"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\TeamManager.h(7): message : см. объявление "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\MyFirstGame.cpp(14,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\MyFirstGame.cpp(17,17): error C2079: "TM" использует не имеющую определения структуру class "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\Session.h(39,17): error C2027: использование неопределенного типа "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\TeamManager.h(7): message : см. объявление "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\Session.h(39,1): message : Сообщение диагностики возникло в созданной компилятором функции "Session::Session(void)"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\Session.h(39): message : см. ссылку на функцию "Session::Session(void)"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\MyFirstGame.cpp(191,33): error C2664: "void Session::GetTeamManager(TeamManager)": невозможно преобразовать аргумент 1 из "int" в "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\MyFirstGame.cpp(191,33): message : использование неопределенного типа "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\TeamManager.h(7,7): message : см. объявление "TeamManager"
+C:\Users\ПК\Desktop\MyGame\My Firsh Game\My Tirsh Game\Session.h(13,7): message : см. объявление "Session::GetTeamManager"
+  Session.cpp
+  TeamManager.cpp
+  Создание кода...
